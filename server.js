@@ -48,6 +48,11 @@ app.post('/login', (req, res) => {
     }
 });
 
+// Ruta para servir el archivo HTML
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html');
+});
+
 // Inicia el servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
